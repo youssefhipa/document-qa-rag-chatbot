@@ -27,8 +27,8 @@ from huggingface_hub import InferenceClient
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-# Use env token if set, otherwise fall back to user-provided token
-HF_TOKEN = os.getenv("HF_TOKEN", "REDACTED")
+# Hugging Face inference token — set HF_TOKEN in the environment (see .env.example).
+HF_TOKEN = os.getenv("HF_TOKEN", "")
 
 
 class GemmaWrapper(LLM):
